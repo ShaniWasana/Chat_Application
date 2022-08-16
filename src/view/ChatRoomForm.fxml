@@ -9,18 +9,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="chatRoomContext" prefHeight="540.0" prefWidth="304.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatRoomFormController">
    <children>
-      <Label prefHeight="46.0" prefWidth="304.0" style="-fx-background-color: #6ab04c;" text=" Chat Room">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ab04c" height="55.0" layoutY="485.0" stroke="BLACK" strokeType="INSIDE" width="304.0" />
       <JFXTextField fx:id="txtMessage" layoutX="14.0" layoutY="497.0" onAction="#txtSendMessageOnAction" prefHeight="27.0" prefWidth="203.0" promptText="Type a message" style="-fx-background-color: #badc58; -fx-background-radius: 30pt;">
          <effect>
@@ -32,17 +27,18 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblName" layoutX="250.0" layoutY="10.0" prefHeight="21.0" prefWidth="45.0" text="USER">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6ab04c" height="55.0" stroke="BLACK" strokeType="INSIDE" width="304.0" />
+      <Label fx:id="lblName" layoutX="230.0" layoutY="29.0" prefHeight="21.0" prefWidth="45.0" text="USER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
                <stops>
                   <Stop color="#5d006b" />
-                  <Stop color="#0a006b" offset="1.0" />
+                  <Stop color="#693200" offset="1.0" />
                </stops>
-            </LinearGradient>
+            </RadialGradient>
          </textFill>
       </Label>
       <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="186.0" layoutY="500.0" onMouseClicked="#chooseImageOnMouseClicked" pickOnBounds="true">
@@ -50,15 +46,15 @@
             <Image url="@../asset/dslr-camera.png" />
          </image>
       </ImageView>
-      <ScrollPane layoutY="40.0" prefHeight="448.0" prefWidth="304.0">
+      <ScrollPane layoutY="55.0" prefHeight="431.0" prefWidth="304.0">
         <content>
-            <VBox fx:id="vBox" prefHeight="443.0" prefWidth="303.0" />
+            <VBox fx:id="vBox" prefHeight="497.0" prefWidth="289.0" />
         </content>
       </ScrollPane>
-      <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="217.0" layoutY="12.0" pickOnBounds="true">
-         <image>
-            <Image url="@../asset/phone-receiver-silhouette.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="103.0" layoutY="3.0" prefHeight="37.0" prefWidth="118.0" text=" CHAT GROUP">
+         <font>
+            <Font name="Cambria Bold Italic" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
