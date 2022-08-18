@@ -52,7 +52,7 @@ public class ChatRoomFormController extends Thread{
        String userName=UserLoginFormController.userName;
         lblName.setText(String.valueOf(userName));
         try {
-            socket = new Socket("localhost", 5000);
+            socket = new Socket("localhost", 5008);
             System.out.println("Socket is connected with server!");
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);

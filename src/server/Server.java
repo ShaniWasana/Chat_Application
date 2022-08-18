@@ -11,7 +11,7 @@ public class Server {
     private static ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(5001);
+        ServerSocket serverSocket = new ServerSocket(5008);
         Socket accept;
 
         while (true) {
